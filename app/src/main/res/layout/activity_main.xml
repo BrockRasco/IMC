@@ -17,25 +17,79 @@
         android:textSize="30sp"
         tools:ignore="MissingConstraints" />
 
+
+    <EditText
+        android:id="@+id/textnom"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="11dp"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"></EditText>
+
+    <EditText
+        android:id="@+id/textprenom"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="49dp"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textnom"></EditText>
+
+    <EditText
+        android:id="@+id/texttaille"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="50dp"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textprenom"></EditText>
+
+    <EditText
+        android:id="@+id/textpoid"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="52dp"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/texttaille"></EditText>
+
+    <EditText
+        android:id="@+id/textchambre"
+        android:layout_width="255dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textpoid"></EditText>
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="407dp"
-        android:layout_height="39dp"
+        android:id="@+id/buttonstat"
+        android:layout_width="431dp"
+        android:layout_height="64dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="236dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="3dp"
+        android:backgroundTint="@color/darkbrown"
         android:text="Affichez les statistique"
         android:textColor="@color/gold"
-        android:backgroundTint="@color/darkbrown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonValider"
         android:layout_width="408dp"
         android:layout_height="41dp"
         android:layout_marginTop="1dp"
@@ -45,7 +99,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton"
+        app:layout_constraintTop_toBottomOf="@+id/rbM"
         android:textColor="@color/gold"
         android:backgroundTint="@color/darkbrown"/>
 
@@ -68,14 +122,14 @@
         android:layout_height="wrap_content"
         android:text="Genre :"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.301" />
 
     <RadioButton
-        android:id="@+id/radioButton"
+        android:id="@+id/rbM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -85,24 +139,24 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/rbF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginBottom="1dp"
         android:text="Féminin"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/radioButton" />
+        app:layout_constraintBottom_toTopOf="@+id/buttonValider"
+        app:layout_constraintStart_toEndOf="@+id/rbM" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="207dp"
         android:layout_height="27dp"
         android:layout_marginEnd="204dp"
-        android:layout_marginBottom="260dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginBottom="332dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonstat"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -116,21 +170,117 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonValider"
         android:textColor="@color/gold"
         android:backgroundTint="@color/darkbrown"/>
 
     <TextView
-        android:textSize="20dp"
         android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Affichez Statistique"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="430dp"
-        android:textColor="@color/gold"
+        android:layout_width="438dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
         android:background="@color/darkbrown"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Statisque du Service"
+        android:textColor="@color/gold"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="49dp"
+        android:text="Nom:"
+        app:layout_constraintEnd_toStartOf="@+id/textnom"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="49dp"
+        android:text="Prénom:"
+        app:layout_constraintEnd_toStartOf="@+id/textprenom"
+        app:layout_constraintTop_toBottomOf="@+id/textnom" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="50dp"
+        android:text="Taille:"
+        app:layout_constraintEnd_toStartOf="@+id/texttaille"
+        app:layout_constraintTop_toBottomOf="@+id/textprenom" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="52dp"
+        android:text="Poids:"
+        app:layout_constraintEnd_toStartOf="@+id/textpoid"
+        app:layout_constraintTop_toBottomOf="@+id/texttaille" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="32dp"
+        android:text="Numéro de chambre:"
+        app:layout_constraintEnd_toStartOf="@+id/textchambre"
+        app:layout_constraintTop_toBottomOf="@+id/textpoid" />
+
+    <TextView
+        android:id="@+id/nbhomme"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="27dp"
+        android:text="Nombre d'homme(s):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/nbfemme"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="13dp"
+        android:text="Nombre de femme(s):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbhomme" />
+
+    <TextView
+        android:id="@+id/IMC"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="13dp"
+        android:text="IMC moyen:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nbfemme" />
+
+    <TextView
+        android:id="@+id/IMChomme"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="13dp"
+        android:text="IMC moyen homme(s):"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IMC" />
+
+    <TextView
+        android:id="@+id/IMCfemme"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:text="IMC moyen femme(s):"
+        app:layout_constraintTop_toBottomOf="@+id/IMChomme"
+        tools:layout_editor_absoluteX="13dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
